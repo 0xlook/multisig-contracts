@@ -338,12 +338,7 @@ contract GnosisSafe
         assembly {
             id := chainid()
         }
-        uint256 eth_id = id;
-        if (id == 1) // mainnet
-            eth_id = 1666600000;
-        else if (id == 2) // testnet
-            eth_id = 1666700000;
-        return eth_id;
+        return id;
     }
 
     function domainSeparator() public view returns (bytes32) {
